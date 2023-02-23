@@ -38,6 +38,8 @@ class AuthService extends ChangeNotifier {
         throw AuthException('A senha é muito fraca');
       } else if (e.code == 'email-already-in-use') {
         throw AuthException('Este email já está cadastrado');
+      } else if (e.code == 'invalid-email') {
+        throw AuthException('Este email não é válido');
       }
     }
   }
